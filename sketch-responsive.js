@@ -1,11 +1,11 @@
 /**
-* @file A simple plugin library to make your p5.js sketch responsive
-* - It works also in p5.js editor
+* https://github.com/lucacattan3o/p5.js-responsive-sketch
+* A simple n library to make your p5.js sketch responsive
+* It works also in p5.js editor
 * @author Luca Cattaneo <luca.cattaneo@mekit.it>
-* {@link https://lucacattan3o.github.io/}
 * @version 1.0.0
 * @copyright Luca Cattaneo 2023
-* @license MIT License
+* @license MIT
 */
 
 let rSketch = {
