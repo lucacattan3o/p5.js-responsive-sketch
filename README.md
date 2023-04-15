@@ -4,22 +4,7 @@ This is simple library can help you make your [p5.js](https://p5js.org/) sketch 
 
 It also works in [p5.js editor](https://editor.p5js.org/).
 
-## How to use it
-
-Add these few lines of css in your project.
-
-```css
-body{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-```    
+## How to use it  
 
 Download [sketch-responsive.js](https://raw.githubusercontent.com/lucacattan3o/p5.js-responsive-sketch/main/sketch-responsive.js) and load it in your project after `sketch.js`.
 
@@ -38,6 +23,21 @@ function setup() {
 ```
 
 Your sketch will be resized according to the available window.
+
+If you want to center your sketch in the window, add these few lines of css in your project.
+
+```css
+body{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```  
 
 ## Mouse position
 
