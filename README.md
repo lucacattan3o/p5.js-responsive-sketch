@@ -2,9 +2,24 @@
 
 This is simple library can help you make your [p5.js](https://p5js.org/) sketch responsive according to the screen size.
 
-It also works in [p5.js editor](https://editor.p5js.org/).
+It also works in [p5.js editor](https://editor.p5js.org/), here is a [working demo](https://editor.p5js.org/lucacattan3o/sketches/GSYqzj995).
 
 ## How to use it  
+
+Add few lines of code in your `style.css`
+
+```css
+html, body{
+  margin: 0;
+  padding: 0;
+  /* add the following lines */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+```
 
 Download [sketch-responsive.js](https://raw.githubusercontent.com/lucacattan3o/p5.js-responsive-sketch/main/sketch-responsive.js) and load it in your project after `sketch.js`.
 
@@ -24,29 +39,38 @@ function setup() {
 
 Your sketch will be resized according to the available window.
 
-If you want to center your sketch in the window, add these few lines of css in your project.
-
-```css
-body{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-```  
-
 ## Mouse position
 
-TDB
+This library will modify the canvas using css `scale()` transformation: therefore the `mouseX` and `mouseY` variables will no longer be correct.
+
+To solve this you can retrieve the right position of the mouse like this.
+
+Define a global variable at the beginning of your sketch and use the `responsiveMousePos()` function to get the right position inside `draw()`.
+
+```js
+let mPos;
+
+function setup() {
+  createCanvas(1080, 1080);
+  responsiveSketch();
+}
+
+function draw() {
+  background(255);
+  
+  mPos = responsiveMousePos();
+  
+  // Wrong position
+  strokeWeight(1);
+  circle(mouseX, mouseY, 150);
+
+  // Right position
+  strokeWeight(10);
+  circle(mPos.x, mPos.y, 150);
+}
+```
+
 
 ## Options
-
-TDB
-
-## Running demo
 
 TDB
