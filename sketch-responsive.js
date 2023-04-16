@@ -94,6 +94,6 @@ function responsiveCanvas(){
     rSketch.scaleFactor = minScaleFactor;
   }
   
-  rSketch.domEl.style = "transform: scale(" + rSketch.scaleFactor + ")";
+  rSketch.domEl.style = "transform: scale(" + rSketch.scaleFactor + ");";
 }
 
