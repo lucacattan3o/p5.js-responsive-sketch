@@ -74,3 +74,24 @@ function draw() {
 ## Options
 
 TDB
+
+## Todo
+
+- [ ] Set pixel dimension to the parent element and add some flex properties
+```js
+let w = width * rSketch.scaleFactor;
+let h = height * rSketch.scaleFactor;
+rSketch.domEl.parentNode.style = "width: " + w + "px; height: " + h + "px;";
+```
+```css
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+- [ ] Css as option
+
+
+
