@@ -7,12 +7,15 @@
 * @license MIT
 */
 
+"use strict";
+
 let rSketch = {
+  domEl: null,
+  domParent: null,
+  margin: 0,
   maxWidth: null,
   maxHeight: null,
-  domEl: null,
   scaleFactor: 1,
-  margin: 0,
 };
 
 /**
@@ -128,3 +131,7 @@ function responsiveCanvas(){
   `;
 }
 
+if (typeof exports !== "undefined"){
+  exports.responsiveSketch = responsiveSketch;
+  exports.responsiveMousePos = responsiveMousePos;
+}

@@ -61,7 +61,6 @@ TDB
 
 ## Todo
 
-- [ ] Update the demo
 - [x] Link the demo
-
-Publish to CDN
+- [ ] Publish to NPM and CDN ([guide](https://medium.com/@gaute.meek/how-to-publish-a-js-library-to-npm-and-cdn-9d0bf9b48e11))
+- [ ] Update the demo with CDN
