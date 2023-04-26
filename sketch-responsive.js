@@ -1,10 +1,9 @@
 /**
 * https://github.com/lucacattan3o/p5.js-responsive-sketch
-* A simple n library to make your p5.js sketch responsive
+* A simple library to make your p5.js sketch responsive
 * It works also in p5.js editor
 * @author Luca Cattaneo <luca.cattaneo@mekit.it>
 * @version 1.0.0
-* @copyright Luca Cattaneo 2023
 * @license MIT
 */
 
@@ -20,15 +19,18 @@ let rSketch = {
  * Make your sketch resposive
  * @summary Use this function inside p5.js setup() function 
  * @param {Object} options - custom options
+ * @param {Bolean} options.centerOnPage - whether the sketch should be centered on the page
  * @param {HTMLElement} options.el - dom element to scale
- * @param {Number} options.margin - margin left aroud the sketch
+ * @param {Number} options.margin - margin around the sketch
+ * @param {Number} options.pixelDensity - set a custom pixel density
  */
 function responsiveSketch(options){
 
   // Default settings
   let defaultSettings = {
-    el: document.getElementsByTagName('main')[0],
+    el: document.getElementsByTagName('canvas')[0],
     margin: 80,
+    centerOnPage: true,
     pixelDensity: 1,
   };
 
@@ -44,13 +46,31 @@ function responsiveSketch(options){
     }
   }
 
-  rSketch.margin = settings.margin;
+  rSketch.centerOnPage = settings.centerOnPage;
   rSketch.domEl = settings.el;
+  rSketch.domParent = settings.el.parentNode;
+  rSketch.margin = settings.margin;
   rSketch.maxWidth = width;
   rSketch.maxHeight = height;
 
   if (settings.pixelDensity !== null){
     pixelDensity(settings.pixelDensity);
+  }
+
+  if (rSketch.centerOnPage){
+    let domBody = document.getElementsByTagName('body')[0];
+    let domHtml = document.getElementsByTagName('html')[0];
+    
+    let pageStyle = `
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+      width: 100%;
+      height: 100%;
+    `;
+
+    domBody.style = pageStyle;
+    domHtml.style = pageStyle;
   }
   
   responsiveCanvas(); 
@@ -93,7 +113,18 @@ function responsiveCanvas(){
   if (minScaleFactor < 1){
     rSketch.scaleFactor = minScaleFactor;
   }
-  
-  rSketch.domEl.style = "transform: scale(" + rSketch.scaleFactor + ");";
+
+  let w = width * rSketch.scaleFactor;
+  let h = height * rSketch.scaleFactor;
+
+  rSketch.domEl.style = `transform: scale(${rSketch.scaleFactor});`;
+
+  rSketch.domParent.style = `
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: ${w}px;
+    height: ${h}px;
+  `;
 }
 

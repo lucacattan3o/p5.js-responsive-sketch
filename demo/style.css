@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+/* color and shadow */
+
+body{
+  background-color: #fafafa;
+}
+
+canvas{
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(168,168,168,0.3); 
+  box-shadow: 0px 0px 15px 5px rgba(168,168,168,0.3);
+}

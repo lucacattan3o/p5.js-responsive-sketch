@@ -1,25 +1,10 @@
 # p5.js Responsive Sketch
 
-This is simple library can help you make your [p5.js](https://p5js.org/) sketch responsive according to the screen size.
+This simple library can help you make your [p5.js](https://p5js.org/) sketch responsive according to the screen size, check this demo.
 
 It also works in [p5.js editor](https://editor.p5js.org/), here is a [working demo](https://editor.p5js.org/lucacattan3o/sketches/GSYqzj995).
 
 ## How to use it  
-
-Add few lines of code in your `style.css`
-
-```css
-html, body{
-  margin: 0;
-  padding: 0;
-  /* add the following lines */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-```
 
 Download [sketch-responsive.js](https://raw.githubusercontent.com/lucacattan3o/p5.js-responsive-sketch/main/sketch-responsive.js) and load it in your project after `sketch.js`.
 
@@ -70,28 +55,13 @@ function draw() {
 }
 ```
 
-
 ## Options
 
 TDB
 
 ## Todo
 
-- [ ] Set pixel dimension to the parent element and add some flex properties
-```js
-let w = width * rSketch.scaleFactor;
-let h = height * rSketch.scaleFactor;
-rSketch.domEl.parentNode.style = "width: " + w + "px; height: " + h + "px;";
-```
-```css
-main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-```
+- [ ] Update the demo
+- [ ] Link the demo
 
-- [ ] Css as option
-
-
-
+Publish to CDN
