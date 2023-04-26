@@ -1,6 +1,6 @@
 # p5.js Responsive Sketch
 
-This simple library can help you make your [p5.js](https://p5js.org/) sketch responsive according to the screen size, [check this demo](https://lucacattan3o.github.io/p5.js-responsive-sketch/demo/index.html).
+This simple library can help you make your [p5.js](https://p5js.org/) sketch responsive according to the screen size, check out [this demo](https://lucacattan3o.github.io/p5.js-responsive-sketch/demo/index.html).
 
 It also works in [p5.js editor](https://editor.p5js.org/), here is a [working demo](https://editor.p5js.org/lucacattan3o/sketches/GSYqzj995).
 
