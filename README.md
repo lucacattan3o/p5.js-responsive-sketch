@@ -65,3 +65,7 @@ function draw() {
 ## Options
 
 TBD
+
+## ES6
+
+This library is not yet ready for use with ES6.

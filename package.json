@@ -1,6 +1,6 @@
 {
   "name": "p5-responsive-sketch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple library to make your p5.js sketch responsive",
   "main": "sketch-responsive.js",
   "repository": {
