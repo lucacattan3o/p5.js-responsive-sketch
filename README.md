@@ -6,7 +6,14 @@ It also works in [p5.js editor](https://editor.p5js.org/), here is a [working de
 
 ## How to use it  
 
-Download [sketch-responsive.js](https://raw.githubusercontent.com/lucacattan3o/p5.js-responsive-sketch/main/sketch-responsive.js) and load it in your project after `sketch.js`.
+Load the library with CDN after `sketch.js`.
+
+```html
+<script src="sketch.js"></script>
+<script src="https://unpkg.com/p5-responsive-sketch/sketch-responsive.js"></script>
+```
+
+Or download [sketch-responsive.js](https://raw.githubusercontent.com/lucacattan3o/p5.js-responsive-sketch/main/sketch-responsive.js) and load it in your project.
 
 ```html
 <script src="sketch.js"></script>
@@ -57,10 +64,4 @@ function draw() {
 
 ## Options
 
-TDB
-
-## Todo
-
-- [x] Link the demo
-- [ ] Publish to NPM and CDN ([guide](https://medium.com/@gaute.meek/how-to-publish-a-js-library-to-npm-and-cdn-9d0bf9b48e11))
-- [ ] Update the demo with CDN
+TBD
