@@ -4,6 +4,11 @@ This simple library can help you make your [p5.js](https://p5js.org/) sketch res
 
 It also works in [p5.js editor](https://editor.p5js.org/), here is a [working demo](https://editor.p5js.org/lucacattan3o/sketches/GSYqzj995).
 
+## Why use it?
+Often in creative coding you want to create an HQ sketch (eg. 1080px x 1080px). In a standard environment your sketch will eventually overflow your viewport; and if you change the dimensions of the sketch with `resizeCanvas()`, all the elements in sketch have to scale proportianally (not an easy task).
+
+This library takes a different approch: it scales the canvas element using css to fit the viewport without affecting the sketch: this way you can easily adjust the viewport or browse your sketch on a mobile device, all elements of the sketch will not be modified.
+
 ## How to use it  
 
 Load the library with CDN after `sketch.js`.
