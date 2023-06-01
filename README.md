@@ -8,7 +8,7 @@ It also works in **p5.js editor**, here is a [working demo](https://editor.p5js.
 
 Often in creative coding you want to create an HQ sketch (eg. 1080px x 1080px). In a standard environment your sketch will eventually overflow your viewport; and if you change the dimensions of the sketch with `resizeCanvas()`, all the elements in sketch have to scale proportianally (not an easy task).
 
-This library takes a different approch: it scales the canvas element using css to fit the viewport without affecting the sketch: this way you can easily adjust the viewport or browse your sketch on a mobile device, all elements of the sketch will not be modified.
+This library takes a different approach: it scales the canvas element using css to fit the viewport without affecting the sketch: this way you can easily adjust the viewport or browse your sketch on a mobile device, all elements of the sketch will not be modified.
 
 ## How to use it  
 
