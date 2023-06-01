@@ -12,18 +12,18 @@ This library takes a different approch: it scales the canvas element using css t
 
 ## How to use it  
 
-Load the library with CDN after `sketch.js`.
+Load the library with CDN.
 
 ```html
-<script src="sketch.js"></script>
 <script src="https://unpkg.com/p5-responsive-sketch"></script>
+<script src="sketch.js"></script>
 ```
 
 Or download [sketch-responsive.js](https://raw.githubusercontent.com/lucacattan3o/p5.js-responsive-sketch/main/sketch-responsive.js) and load it in your project.
 
 ```html
-<script src="sketch.js"></script>
 <script src="sketch-responsive.js"></script>
+<script src="sketch.js"></script>
 ```
 
 Inside `sketch.js`, use the `responsiveSketch()` function after `createCanvas()`.
