@@ -16,7 +16,7 @@ Load the library with CDN after `sketch.js`.
 
 ```html
 <script src="sketch.js"></script>
-<script src="https://unpkg.com/p5-responsive-sketch/sketch-responsive.js"></script>
+<script src="https://unpkg.com/p5-responsive-sketch"></script>
 ```
 
 Or download [sketch-responsive.js](https://raw.githubusercontent.com/lucacattan3o/p5.js-responsive-sketch/main/sketch-responsive.js) and load it in your project.
@@ -68,10 +68,44 @@ function draw() {
 }
 ```
 
+Take a look a the [demo](https://lucacattan3o.github.io/p5.js-responsive-sketch/demo/index.html) to see it in action.
+
 ## Options
 
-TBD
+You can optionally pass some options as an object.
 
-## ES6
+### Margin 
+
+This will set the margin around the canvas. Default to `80`, `0` to disable.
+
+```js
+responsiveSketch({
+  margin: 10
+});
+```
+### Center on page
+
+By default the canvas will be centered in the page using css flex. You can turn off this behavior with the `centerOnPage` option.
+
+```js
+responsiveSketch({
+  margin: 0,
+  centerOnPage: false
+});
+```
+
+### Pixel density
+
+By default the [pixel density](https://p5js.org/reference/#/p5/pixelDensity) is set to `1`.
+You can pass any number or set the option to `null` to manage that on your own.
+
+```js
+responsiveSketch({
+  margin: 0,
+  pixelDensity: null
+});
+```
+
+## ES6 Compatibility
 
 This library is not yet ready for use with ES6.

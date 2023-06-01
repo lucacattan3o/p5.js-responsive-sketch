@@ -3,7 +3,7 @@
 * A simple library to make your p5.js sketch responsive
 * It works also in p5.js editor
 * @author Luca Cattaneo <luca.cattaneo@mekit.it>
-* @version 1.0.1
+* @version 1.0.2
 * @license MIT
 */
 
